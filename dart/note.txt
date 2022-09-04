@@ -1,0 +1,2 @@
+- Dart variable
++ khai báo biến trong dart cũng khá đơn giảng. ex: String name = "dotieuthien";
