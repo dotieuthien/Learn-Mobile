@@ -1,2 +1,6 @@
 - Dart variable
-+ khai báo biến trong dart cũng khá đơn giảng. ex: String name = "dotieuthien";
++ khai báo biến trong dart cũng khá đơn giản. ex: String name = "dotieuthien";
++ final và const đều được dùng để ngăn giá trị của biến thay đổi sau khi khởi tạo
++ với biến const thì bắt buộc phải gán giá trị khi khởi tạo và không thể thay đổi gía trị
++ final thì có thể thay đổi
++ trong class thì dùng const phải đi chung với static để khai báo
