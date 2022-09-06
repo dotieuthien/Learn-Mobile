@@ -1,6 +1,14 @@
 - Dart variable
 + khai báo biến trong dart cũng khá đơn giản. ex: String name = "dotieuthien";
-+ final và const đều được dùng để ngăn giá trị của biến thay đổi sau khi khởi tạo
++ final và const đều được dùng để ngăn giá trị của biến thay đổi sau khi khởi tạo --> chỉ được gán 1 lần
 + với biến const thì bắt buộc phải gán giá trị khi khởi tạo và không thể thay đổi gía trị
 + final thì có thể thay đổi
-+ trong class thì dùng const phải đi chung với static để khai báo
++ trong class thì dùng const phải đi chung với static để khai báo --> bởi vì trình biên dịch cần biết giá trị của const
+trước khi biên dịch --> gán thêm static để biến const thành 1 thuộc tính của class coi như là được biết trước
++ final khác const ở chỗ là runtime-const chứ ko phải compile-time như const
+
+- Null safety trong dart
++ khi khai báo biến thì mặc định của dart thì biến đó ko thể là null. vd: String name; thì name ko phải là Null
+mặc dù chưa gán giá trị cho nó
++ Muốn biến đó có thể nhận dc null thì thêm dấu ? --> String? name;
++ Muốn biến đó khai báo với non-null nhưng chưa cần gán thì sử dụng late
