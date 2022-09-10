@@ -12,3 +12,5 @@ trước khi biên dịch --> gán thêm static để biến const thành 1 thu�
 mặc dù chưa gán giá trị cho nó
 + Muốn biến đó có thể nhận dc null thì thêm dấu ? --> String? name;
 + Muốn biến đó khai báo với non-null nhưng chưa cần gán thì sử dụng late
+
+- Data types
