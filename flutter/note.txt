@@ -1,0 +1,14 @@
+- Trong flutter có 2 widget quan trọng là StatelessWidget vs StatefullWidget
+
++ StatelessWidget là widget mà nó sẽ không thay đổi được khi đã được Render xong
++ Widget Stateless cần 1 hàm Widget build(BuildContext context) --> để render dữ liệu lên màn hình
++ Dữ liệu hiển thị có thể truyền thông qua Constructors của class --> không thể thay đổi được
++ Stateless không tự thay đổi được nhưng khi widget cha thay đổi thì sẽ render lại
+
+- return Container --> tạo 1 widget combines nhiều thứ
+
+- SaveArea Widget giúp cho show body của page không bị overlap với OS interface,
+ví dụ như chữ chèn vào tai thỏ, ...
+
+- Button.onChanged --> call 1 function khi click vào button
+Button.items --> những items mà user có thể chọn
