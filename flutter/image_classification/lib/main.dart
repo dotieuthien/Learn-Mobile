@@ -52,19 +52,33 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   Future getImage() async {
+    print("Start get image");
     final pickedFile = await picker.getImage(source: ImageSource.gallery);
+    if (pickedFile != null) {
+        setState(() {
+          _image = File(pickedFile!.path);
+          _imageWidget = Image.file(_image!);
+          
+          _predict();
+          });
+    } else {
+      print("Cannot get image");
+    }
+    
 
-    setState(() {
-      _image = File(pickedFile!.path);
-      _imageWidget = Image.file(_image!);
+    // setState(() {
+    //   _image = File(pickedFile!.path);
+    //   _imageWidget = Image.file(_image!);
 
-      _predict();
-    });
+    //   _predict();
+    // });
   }
 
   void _predict() async {
+    print("Classify image");
     img.Image imageInput = img.decodeImage(_image!.readAsBytesSync())!;
     var pred = _classifier.predict(imageInput);
+    print(pred);
 
     setState(() {
       this.category = pred;
@@ -75,9 +89,8 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
-          'TfLite Flutter Helper',
-          style: TextStyle(color: Colors.white)),
+        title: Text('TfLite Flutter',
+            style: TextStyle(color: Colors.white)),
       ),
       body: Column(
         children: <Widget>[
